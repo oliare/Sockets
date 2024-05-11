@@ -1,0 +1,32 @@
+﻿<Window x:Class="Sockets.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Sockets"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Margin="5" Background="#FFFADFDF">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Label Margin="5" Content="Enter your post index:" Height="25" HorizontalAlignment="Right" FontWeight="Bold"/>
+        <TextBox x:Name="postIndexTextBox" Margin="5" Height="20" Grid.Column="1" Grid.ColumnSpan="2" />
+
+        <Button Content="Get a list of streets by index" Height="30" Grid.Column="1" HorizontalAlignment="Center" Grid.ColumnSpan="2" 
+                Margin="0,0,0,76" Click="SearchButton_Click" Padding="10 0" Grid.RowSpan="2" Background="White"  VerticalAlignment="Bottom"/>
+        <ListBox x:Name="streetsListBox" Grid.Row="1" Grid.ColumnSpan="4" Margin="0,50,0,0" Grid.RowSpan="3"/>
+
+    </Grid>
+</Window>
